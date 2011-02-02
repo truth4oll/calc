@@ -4,7 +4,6 @@
     <list default="true" id="2f41693d-f202-4d5a-b688-2806812d78a3" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ids.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calc.iml" afterPath="$PROJECT_DIR$/Calc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/FirstActivity.java" afterPath="$PROJECT_DIR$/src/com/example/FirstActivity.java" />
     </list>
@@ -83,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FirstActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/FirstActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="453" selection-end="453" vertical-scroll-proportion="0.65891474">
+            <state line="18" column="45" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="0" selection-start="5989" selection-end="5989" vertical-scroll-proportion="0.0">
+            <state line="150" column="58" selection-start="5956" selection-end="5956" vertical-scroll-proportion="0.6124031">
               <folding />
             </state>
           </provider>
@@ -137,9 +136,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/values/ids.xml" />
         <option value="$PROJECT_DIR$/src/com/example/FirstActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
       </list>
     </option>
   </component>
@@ -211,6 +210,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="0" selection-start="5989" selection-end="5989" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/ids.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
@@ -530,10 +540,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/FirstActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="453" selection-end="453" vertical-scroll-proportion="0.65891474">
+        <state line="18" column="45" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="58" selection-start="5956" selection-end="5956" vertical-scroll-proportion="0.6124031">
+          <folding />
         </state>
       </provider>
     </entry>

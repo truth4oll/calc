@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:text="C"
                 android:layout_weight="1"
-                android:onClick="clearButton"/>
+                android:onClick="clearButton1"/>
     </TableRow>
 
 </TableLayout>
