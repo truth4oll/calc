@@ -101,41 +101,81 @@ public class FirstActivity extends Activity
 
     public void actionButton(View view){
 
-        String string;
+        String string, string1;
 
         TextView txtHistory = (TextView)findViewById(R.id.history);
         TextView txt = (TextView) findViewById(R.id.text);
 
+        if (action == null)
         arg1 = parseInt((String) txt.getText());
 
         switch (view.getId()){
             case R.id.sum:
-                action = Action.SUM;
-                string = "+";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
+                if (action == null)
+                {
+                    action = Action.SUM;
+                    string = "+";
+                    txt.setText(null);
+                    txtHistory.setText(txtHistory.getText() + string);
+                }
+                else
+                {
+                    action = Action.SUM;
+                    string = "+";
+                    string1 = txtHistory.getText().toString();
+                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
+                }
                 break;
             case R.id.minus:
-                action = Action.MINUS;
-                string = "-";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
+                if (action == null)
+                {
+                    action = Action.MINUS;
+                    string = "-";
+                    txt.setText(null);
+                    txtHistory.setText(txtHistory.getText() + string);
+                }
+                else
+                {
+                    action = Action.MINUS;
+                    string = "-";
+                    string1 = txtHistory.getText().toString();
+                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
+                }
                 break;
             case R.id.multiply:
-                action = Action.MULTIPLY;
-                string = "×";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
+                if (action == null)
+                {
+                    action = Action.MULTIPLY;
+                    string = "×";
+                    txt.setText(null);
+                    txtHistory.setText(txtHistory.getText() + string);
+                }
+                else
+                {
+                    action = Action.MULTIPLY;
+                    string = "×";
+                    string1 = txtHistory.getText().toString();
+                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
+                }
                 break;
             case R.id.division:
-                action = Action.DIVISION;
-                string = "/";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
+                if (action == null)
+                {
+                    action = Action.DIVISION;
+                    string = "/";
+                    txt.setText(null);
+                    txtHistory.setText(txtHistory.getText() + string);
+                }
+                else
+                {
+                    action = Action.DIVISION;
+                    string = "/";
+                    string1 = txtHistory.getText().toString();
+                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
+
+                }
                 break;
         }
-
-
     }
 
     public void summaryButton(View view){
