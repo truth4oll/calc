@@ -98,29 +98,23 @@ public class FirstActivity extends Activity
 
         if (action == 1) {
             sResult =    Integer.toString(arg1+Integer.parseInt((String) txt.getText()));
-            txt.setText(sResult);
-            action = 0;
         }
         if (action == 2) {
             sResult =  Integer.toString(arg1-Integer.parseInt((String) txt.getText()));
-            txt.setText(sResult);
-            action = 0;
         }
         if (action == 3) {
             sResult =    Integer.toString(arg1*Integer.parseInt((String) txt.getText()));
-            txt.setText(sResult);
-            action = 0;
         }
         if (action == 4) {
             sResult =    Integer.toString(arg1/Integer.parseInt((String) txt.getText()));
-            txt.setText(sResult);
-            action = 0;
         }
         if (!this.isCounted){
             txtHistory.setText(txtHistory.getText() + "=" + sResult );
         }
+        txt.setText(sResult);
 
         this.isCounted = true;
+        action = 0;
 
     }
 
