@@ -24,7 +24,6 @@ public class FirstActivity extends Activity
 
     public void numButton(View view) {
 
-        String string, historyString;
         TextView txt = (TextView) findViewById(R.id.text);
         TextView txtHistory = (TextView)findViewById(R.id.history);
 
@@ -36,64 +35,44 @@ public class FirstActivity extends Activity
 
         switch (view.getId()) {
             case R.id.num1:
-                string = txt.getText() + Integer.toString(1);
-                historyString =  txtHistory.getText() + Integer.toString(1);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("1");
+                txtHistory.append("1");
                 break;
             case R.id.num2:
-                string = txt.getText() + Integer.toString(2);
-                historyString =  txtHistory.getText() + Integer.toString(2);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("2");
+                txtHistory.append("2");
                 break;
             case R.id.num3:
-                string = txt.getText() + Integer.toString(3);
-                historyString =  txtHistory.getText() + Integer.toString(3);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("3");
+                txtHistory.append("3");
                 break;
             case R.id.num4:
-                string = txt.getText() + Integer.toString(4);
-                historyString =  txtHistory.getText() + Integer.toString(4);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("4");
+                txtHistory.append("4");
                 break;
             case R.id.num5:
-                string = txt.getText() + Integer.toString(5);
-                historyString =  txtHistory.getText() + Integer.toString(5);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("5");
+                txtHistory.append("5");
                 break;
             case R.id.num6:
-                string =  txt.getText() + Integer.toString(6);
-                historyString =  txtHistory.getText() + Integer.toString(6);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("6");
+                txtHistory.append("6");
                 break;
             case R.id.num7:
-                string = txt.getText() + Integer.toString(7);
-                historyString =  txtHistory.getText() + Integer.toString(7);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("7");
+                txtHistory.append("7");
                 break;
             case R.id.num8:
-                string = txt.getText() + Integer.toString(8);
-                historyString =  txtHistory.getText() + Integer.toString(8);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("8");
+                txtHistory.append("8");
                 break;
             case R.id.num9:
-                string = txt.getText() + Integer.toString(9);
-                historyString =  txtHistory.getText() + Integer.toString(9);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("9");
+                txtHistory.append("9");
                 break;
             case R.id.num0:
-                string = txt.getText() + Integer.toString(0);
-                historyString =  txtHistory.getText() + Integer.toString(0);
-                txt.setText(string);
-                txtHistory.setText(historyString);
+                txt.append("0");
+                txtHistory.append("0");
                 break;
         }
 
@@ -107,7 +86,7 @@ public class FirstActivity extends Activity
         TextView txt = (TextView) findViewById(R.id.text);
 
         if (action == null)
-        arg1 = parseInt((String) txt.getText());
+        arg1 = parseInt(txt.getText().toString());
 
         switch (view.getId()){
             case R.id.sum:
@@ -187,28 +166,28 @@ public class FirstActivity extends Activity
 
         if (action == Action.SUM && !isCounted)
         {
-            sResult =  Integer.toString(arg1 + parseInt((String) txt.getText()));
+            sResult =  Integer.toString(arg1 + parseInt(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.MINUS && !isCounted)
         {
-            sResult =  Integer.toString(arg1 - parseInt((String) txt.getText()));
+            sResult =  Integer.toString(arg1 - parseInt(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.MULTIPLY && !isCounted)
         {
-            sResult =  Integer.toString(arg1 * parseInt((String) txt.getText()));
+            sResult =  Integer.toString(arg1 * parseInt(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.DIVISION && !isCounted)
         {
-            sResult =  Double.toString((double) arg1 / parseInt((String) txt.getText()));
+            sResult =  Double.toString((double) arg1 / parseInt(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
