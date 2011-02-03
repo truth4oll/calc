@@ -79,7 +79,7 @@ public class FirstActivity extends Activity
                 break;
             case R.id.multiply:
                 action = 3;
-                string = "*";
+                string = "×";
                 break;
             case R.id.division:
                 action = 4;
