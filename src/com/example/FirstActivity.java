@@ -116,8 +116,12 @@ public class FirstActivity extends Activity
             txt.setText(sResult);
             action = 0;
         }
+        if (!this.isCounted){
+            txtHistory.setText(txtHistory.getText() + "=" + sResult );
+        }
+
         this.isCounted = true;
-        txtHistory.setText(txtHistory.getText() + "=" + sResult );
+
     }
 
     public void clearButton(View view){
