@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static java.lang.Integer.*;
+
 public class FirstActivity extends Activity
 {
     private int arg1;
@@ -104,7 +106,7 @@ public class FirstActivity extends Activity
         TextView txtHistory = (TextView)findViewById(R.id.history);
         TextView txt = (TextView) findViewById(R.id.text);
 
-        arg1 = Integer.parseInt((String) txt.getText());
+        arg1 = parseInt((String) txt.getText());
 
         switch (view.getId()){
             case R.id.sum:
@@ -145,28 +147,28 @@ public class FirstActivity extends Activity
 
         if (action == Action.SUM && !isCounted)
         {
-            sResult =  Integer.toString(arg1+Integer.parseInt((String) txt.getText()));
+            sResult =  Integer.toString(arg1 + parseInt((String) txt.getText()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.MINUS && !isCounted)
         {
-            sResult =  Integer.toString(arg1-Integer.parseInt((String) txt.getText()));
+            sResult =  Integer.toString(arg1 - parseInt((String) txt.getText()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.MULTIPLY && !isCounted)
         {
-            sResult =  Integer.toString(arg1*Integer.parseInt((String) txt.getText()));
+            sResult =  Integer.toString(arg1 * parseInt((String) txt.getText()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.DIVISION && !isCounted)
         {
-            sResult =  Integer.toString(arg1/Integer.parseInt((String) txt.getText()));
+            sResult =  Double.toString((double) arg1 / parseInt((String) txt.getText()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
