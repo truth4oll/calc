@@ -11,7 +11,7 @@ public class FirstActivity extends Activity
 {
     private int arg1;
     private boolean isCounted = false;
-    private enum Action { SUM, MINUS, MULTIPLY, DIVISION};
+    private enum Action { SUM, MINUS, MULTIPLY, DIVISION }
     private Action action;
 
     @Override
@@ -73,7 +73,7 @@ public class FirstActivity extends Activity
 
     public void actionButton(View view){
 
-        String string, string1;
+        String string;
 
         TextView txtHistory = (TextView)findViewById(R.id.history);
         TextView txt = (TextView) findViewById(R.id.text);
@@ -84,71 +84,30 @@ public class FirstActivity extends Activity
 
         switch (view.getId()){
             case R.id.sum:
-                if (action == null)
-                {
-                    action = Action.SUM;
-                    string = "+";
-                    txt.setText(null);
-                    txtHistory.setText(txtHistory.getText() + string);
-                }
-                else
-                {
-                    action = Action.SUM;
-                    string = "+";
-                    string1 = txtHistory.getText().toString();
-                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
-                }
+                action = Action.SUM;
+                string = "+";
+                txt.setText(null);
+                txtHistory.setText(txtHistory.getText() + string);
                 break;
             case R.id.minus:
-                if (action == null)
-                {
-                    action = Action.MINUS;
-                    string = "-";
-                    txt.setText(null);
-                    txtHistory.setText(txtHistory.getText() + string);
-                }
-                else
-                {
-                    action = Action.MINUS;
-                    string = "-";
-                    string1 = txtHistory.getText().toString();
-                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
-                }
+                action = Action.MINUS;
+                string = "-";
+                txt.setText(null);
+                txtHistory.setText(txtHistory.getText() + string);
                 break;
             case R.id.multiply:
-                if (action == null)
-                {
-                    action = Action.MULTIPLY;
-                    string = "×";
-                    txt.setText(null);
-                    txtHistory.setText(txtHistory.getText() + string);
-                }
-                else
-                {
-                    action = Action.MULTIPLY;
-                    string = "×";
-                    string1 = txtHistory.getText().toString();
-                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
-                }
+                action = Action.MULTIPLY;
+                string = "×";
+                txt.setText(null);
+                txtHistory.setText(txtHistory.getText() + string);
                 break;
             case R.id.division:
-                if (action == null)
-                {
-                    action = Action.DIVISION;
-                    string = "/";
-                    txt.setText(null);
-                    txtHistory.setText(txtHistory.getText() + string);
-                }
-                else
-                {
-                    action = Action.DIVISION;
-                    string = "/";
-                    string1 = txtHistory.getText().toString();
-                    txtHistory.setText(string1.substring(0, string1.length()-1) + string);
-
-                }
+                action = Action.DIVISION;
+                string = "/";
+                txt.setText(null);
+                txtHistory.setText(txtHistory.getText() + string);
                 break;
-        }
+            }
         }
     }
 
