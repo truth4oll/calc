@@ -5,35 +5,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import static java.lang.Integer.*;
 import static java.lang.Long.parseLong;
 
-public class FirstActivity extends Activity
-{
+
+public class FirstActivity extends Activity {
     private long arg1;
     private boolean isCounted = false;
-    private enum Action { SUM, MINUS, MULTIPLY, DIVISION }
+
+
+    private enum Action {SUM, MINUS, MULTIPLY, DIVISION}
+
     private Action action;
+    private TextView txt, txtHistory;
+
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        txt = (TextView) findViewById(R.id.text);
+        txtHistory = (TextView) findViewById(R.id.history);
+
     }
 
 
     public void numButton(View view) {
         CharSequence value = null;
 
-        TextView txt = (TextView) findViewById(R.id.text);
-        TextView txtHistory = (TextView)findViewById(R.id.history);
-
-         if (isCounted)
-         {
-             clearAction();
-             isCounted=false;
-         }
+        if (isCounted) {
+            clearAction();
+            isCounted = false;
+        }
 
         switch (view.getId()) {
             case R.id.num1:
@@ -72,77 +74,68 @@ public class FirstActivity extends Activity
 
     }
 
-    public void actionButton(View view){
+    public void actionButton(View view) {
 
         String string;
 
-        TextView txtHistory = (TextView)findViewById(R.id.history);
-        TextView txt = (TextView) findViewById(R.id.text);
 
         if (action == null)
-        if (txt.getText().length()!=0){
-        arg1 = parseLong(txt.getText().toString());
+            if (txt.getText().length() != 0) {
+                arg1 = parseLong(txt.getText().toString());
 
-        switch (view.getId()){
-            case R.id.sum:
-                action = Action.SUM;
-                string = "+";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
-                break;
-            case R.id.minus:
-                action = Action.MINUS;
-                string = "-";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
-                break;
-            case R.id.multiply:
-                action = Action.MULTIPLY;
-                string = "×";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
-                break;
-            case R.id.division:
-                action = Action.DIVISION;
-                string = "/";
-                txt.setText(null);
-                txtHistory.setText(txtHistory.getText() + string);
-                break;
+                switch (view.getId()) {
+                    case R.id.sum:
+                        action = Action.SUM;
+                        string = "+";
+                        txt.setText(null);
+                        txtHistory.setText(txtHistory.getText() + string);
+                        break;
+                    case R.id.minus:
+                        action = Action.MINUS;
+                        string = "-";
+                        txt.setText(null);
+                        txtHistory.setText(txtHistory.getText() + string);
+                        break;
+                    case R.id.multiply:
+                        action = Action.MULTIPLY;
+                        string = "×";
+                        txt.setText(null);
+                        txtHistory.setText(txtHistory.getText() + string);
+                        break;
+                    case R.id.division:
+                        action = Action.DIVISION;
+                        string = "/";
+                        txt.setText(null);
+                        txtHistory.setText(txtHistory.getText() + string);
+                        break;
+                }
             }
-        }
     }
 
-    public void summaryButton(View view){
+    public void summaryButton(View view) {
 
         String sResult;
-        TextView txt = (TextView) findViewById(R.id.text);
-        TextView txtHistory = (TextView)findViewById(R.id.history);
 
-
-        if (action == Action.SUM && !isCounted)
-        {
-            sResult =  Long.toString(arg1 + parseLong(txt.getText().toString()));
+        if (action == Action.SUM && !isCounted) {
+            sResult = Long.toString(arg1 + parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
-        if (action == Action.MINUS && !isCounted)
-        {
-            sResult =  Long.toString(arg1 - parseLong(txt.getText().toString()));
+        if (action == Action.MINUS && !isCounted) {
+            sResult = Long.toString(arg1 - parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
-        if (action == Action.MULTIPLY && !isCounted)
-        {
-            sResult =  Long.toString(arg1 * parseLong(txt.getText().toString()));
+        if (action == Action.MULTIPLY && !isCounted) {
+            sResult = Long.toString(arg1 * parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
-        if (action == Action.DIVISION && !isCounted)
-        {
-            sResult =  Double.toString((double) arg1 / parseLong(txt.getText().toString()));
+        if (action == Action.DIVISION && !isCounted) {
+            sResult = Double.toString((double) arg1 / parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
@@ -152,16 +145,12 @@ public class FirstActivity extends Activity
 
     }
 
-    public void clearButton(View view){
-          clearAction();
+    public void clearButton(View view) {
+        clearAction();
     }
 
 
-    private void clearAction(){
-
-        TextView txt = (TextView) findViewById(R.id.text);
-        TextView txtHistory = (TextView)findViewById(R.id.history);
-
+    private void clearAction() {
         arg1 = 0;
         action = null;
 
