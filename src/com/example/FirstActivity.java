@@ -12,7 +12,6 @@ public class FirstActivity extends Activity {
     private long arg1;
     private boolean isCounted = false;
 
-
     private enum Action {SUM, MINUS, MULTIPLY, DIVISION}
 
     private Action action;
@@ -69,6 +68,7 @@ public class FirstActivity extends Activity {
                 value = "0";
                 break;
         }
+
         txt.append(value);
         txtHistory.append(value);
 
@@ -76,68 +76,66 @@ public class FirstActivity extends Activity {
 
     public void actionButton(View view) {
 
-        String string;
-
+        String string = null;
 
         if (action == null)
             if (txt.getText().length() != 0) {
+
                 arg1 = parseLong(txt.getText().toString());
 
                 switch (view.getId()) {
                     case R.id.sum:
                         action = Action.SUM;
                         string = "+";
-                        txt.setText(null);
-                        txtHistory.setText(txtHistory.getText() + string);
                         break;
                     case R.id.minus:
                         action = Action.MINUS;
                         string = "-";
-                        txt.setText(null);
-                        txtHistory.setText(txtHistory.getText() + string);
                         break;
                     case R.id.multiply:
                         action = Action.MULTIPLY;
                         string = "×";
-                        txt.setText(null);
-                        txtHistory.setText(txtHistory.getText() + string);
                         break;
                     case R.id.division:
                         action = Action.DIVISION;
                         string = "/";
-                        txt.setText(null);
-                        txtHistory.setText(txtHistory.getText() + string);
                         break;
-                }
             }
+
+        txt.setText(null);
+        txtHistory.setText(txtHistory.getText() + string);
+
+        }
     }
 
     public void summaryButton(View view) {
 
-        String sResult;
+        String sResult = null;
+
+        if (action == Action.DIVISION && !isCounted) {
+            sResult = Double.toString((double) arg1 / parseLong(txt.getText().toString()));
+            txtHistory.setText(txtHistory.getText() + "=" + String.format("%.2f", Double.parseDouble(sResult)));
+            txt.setText(String.format("%.2f", Double.parseDouble(sResult)));
+        }
+
+        else
+        {
 
         if (action == Action.SUM && !isCounted) {
             sResult = Long.toString(arg1 + parseLong(txt.getText().toString()));
-            txtHistory.setText(txtHistory.getText() + "=" + sResult);
-            txt.setText(sResult);
         }
 
         if (action == Action.MINUS && !isCounted) {
             sResult = Long.toString(arg1 - parseLong(txt.getText().toString()));
-            txtHistory.setText(txtHistory.getText() + "=" + sResult);
-            txt.setText(sResult);
         }
 
         if (action == Action.MULTIPLY && !isCounted) {
             sResult = Long.toString(arg1 * parseLong(txt.getText().toString()));
-            txtHistory.setText(txtHistory.getText() + "=" + sResult);
-            txt.setText(sResult);
         }
 
-        if (action == Action.DIVISION && !isCounted) {
-            sResult = Double.toString((double) arg1 / parseLong(txt.getText().toString()));
-            txtHistory.setText(txtHistory.getText() + "=" + sResult);
-            txt.setText(sResult);
+        txtHistory.setText(txtHistory.getText() + "=" + sResult);
+        txt.setText(sResult);
+
         }
 
         isCounted = true;
@@ -151,6 +149,7 @@ public class FirstActivity extends Activity {
 
 
     private void clearAction() {
+
         arg1 = 0;
         action = null;
 
