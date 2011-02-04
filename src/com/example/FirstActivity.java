@@ -79,6 +79,7 @@ public class FirstActivity extends Activity
         TextView txt = (TextView) findViewById(R.id.text);
 
         if (action == null)
+        if (txt.getText().length()!=0){
         arg1 = parseInt(txt.getText().toString());
 
         switch (view.getId()){
@@ -147,6 +148,7 @@ public class FirstActivity extends Activity
 
                 }
                 break;
+        }
         }
     }
 
