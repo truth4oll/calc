@@ -23,6 +23,7 @@ public class FirstActivity extends Activity
 
 
     public void numButton(View view) {
+        CharSequence value = "0";
 
         TextView txt = (TextView) findViewById(R.id.text);
         TextView txtHistory = (TextView)findViewById(R.id.history);
@@ -35,46 +36,38 @@ public class FirstActivity extends Activity
 
         switch (view.getId()) {
             case R.id.num1:
-                txt.append("1");
-                txtHistory.append("1");
+                value = "1";
                 break;
             case R.id.num2:
-                txt.append("2");
-                txtHistory.append("2");
+                value = "2";
                 break;
             case R.id.num3:
-                txt.append("3");
-                txtHistory.append("3");
+                value = "3";
                 break;
             case R.id.num4:
-                txt.append("4");
-                txtHistory.append("4");
+                value = "4";
                 break;
             case R.id.num5:
-                txt.append("5");
-                txtHistory.append("5");
+                value = "5";
                 break;
             case R.id.num6:
-                txt.append("6");
-                txtHistory.append("6");
+                value = "6";
                 break;
             case R.id.num7:
-                txt.append("7");
-                txtHistory.append("7");
+                value = "7";
                 break;
             case R.id.num8:
-                txt.append("8");
-                txtHistory.append("8");
+                value = "8";
                 break;
             case R.id.num9:
-                txt.append("9");
-                txtHistory.append("9");
+                value = "9";
                 break;
             case R.id.num0:
-                txt.append("0");
-                txtHistory.append("0");
+                value = "0";
                 break;
         }
+        txt.append(value);
+        txtHistory.append(value);
 
     }
 
