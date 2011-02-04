@@ -6,10 +6,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import static java.lang.Integer.*;
+import static java.lang.Long.parseLong;
 
 public class FirstActivity extends Activity
 {
-    private int arg1;
+    private long arg1;
     private boolean isCounted = false;
     private enum Action { SUM, MINUS, MULTIPLY, DIVISION }
     private Action action;
@@ -23,7 +24,7 @@ public class FirstActivity extends Activity
 
 
     public void numButton(View view) {
-        CharSequence value = "0";
+        CharSequence value = null;
 
         TextView txt = (TextView) findViewById(R.id.text);
         TextView txtHistory = (TextView)findViewById(R.id.history);
@@ -80,7 +81,7 @@ public class FirstActivity extends Activity
 
         if (action == null)
         if (txt.getText().length()!=0){
-        arg1 = parseInt(txt.getText().toString());
+        arg1 = parseLong(txt.getText().toString());
 
         switch (view.getId()){
             case R.id.sum:
@@ -120,28 +121,28 @@ public class FirstActivity extends Activity
 
         if (action == Action.SUM && !isCounted)
         {
-            sResult =  Integer.toString(arg1 + parseInt(txt.getText().toString()));
+            sResult =  Long.toString(arg1 + parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.MINUS && !isCounted)
         {
-            sResult =  Integer.toString(arg1 - parseInt(txt.getText().toString()));
+            sResult =  Long.toString(arg1 - parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.MULTIPLY && !isCounted)
         {
-            sResult =  Integer.toString(arg1 * parseInt(txt.getText().toString()));
+            sResult =  Long.toString(arg1 * parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
 
         if (action == Action.DIVISION && !isCounted)
         {
-            sResult =  Double.toString((double) arg1 / parseInt(txt.getText().toString()));
+            sResult =  Double.toString((double) arg1 / parseLong(txt.getText().toString()));
             txtHistory.setText(txtHistory.getText() + "=" + sResult);
             txt.setText(sResult);
         }
