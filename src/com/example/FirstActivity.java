@@ -2,6 +2,7 @@ package com.example;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,55 +23,29 @@ public class FirstActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
         txt = (TextView) findViewById(R.id.text);
         txtHistory = (TextView) findViewById(R.id.history);
-
     }
 
 
-    public void numButton(View view) {
-        CharSequence value = null;
+
+
+
+    public void NumButtonAction(View view) {
+        int value;
 
         if (isCounted) {
             clearAction();
             isCounted = false;
         }
 
-        switch (view.getId()) {
-            case R.id.num1:
-                value = "1";
-                break;
-            case R.id.num2:
-                value = "2";
-                break;
-            case R.id.num3:
-                value = "3";
-                break;
-            case R.id.num4:
-                value = "4";
-                break;
-            case R.id.num5:
-                value = "5";
-                break;
-            case R.id.num6:
-                value = "6";
-                break;
-            case R.id.num7:
-                value = "7";
-                break;
-            case R.id.num8:
-                value = "8";
-                break;
-            case R.id.num9:
-                value = "9";
-                break;
-            case R.id.num0:
-                value = "0";
-                break;
-        }
+        NumButton NumButon = (NumButton) view;
+        value = NumButon.getValue();
 
-        txt.append(value);
-        txtHistory.append(value);
+
+        txt.append(String.valueOf(value));
+        txtHistory.append(String.valueOf(value));
 
     }
 

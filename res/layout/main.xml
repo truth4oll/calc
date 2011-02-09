@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res/com.example"
              android:orientation="vertical"
              android:layout_width="fill_parent"
              android:layout_height="fill_parent"
         >
-
 
 
     <TextView
@@ -63,99 +63,109 @@
               android:layout_height="wrap_content"
               android:orientation="horizontal">
 
-        <Button android:id="@+id/num1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:layout_weight="1"
-                android:onClick="numButton"/>
-        <Button android:id="@+id/num2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:layout_weight="1"
-                android:onClick="numButton"/>
-         <Button android:id="@+id/num3"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:layout_weight="1"
-                android:onClick="numButton"/>
 
+        <com.example.NumButton android:id="@+id/num1"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:text="1"
+                              app:value="1"
+                              android:layout_weight="1"
+                              android:onClick="NumButtonAction"/>
+        <com.example.NumButton android:id="@+id/num2"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:text="2"
+                              app:value="2"
+                              android:layout_weight="1"
+                              android:onClick="NumButtonAction"/>
+        <com.example.NumButton android:id="@+id/num3"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:text="3"
+                              app:value="3"
+                              android:layout_weight="1"
+                              android:onClick="NumButtonAction"/>
     </TableRow>
     <TableRow android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal">
 
-        <Button android:id="@+id/num4"
+        <com.example.NumButton android:id="@+id/num4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="4"
+                app:value="4"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
-        <Button android:id="@+id/num5"
+                android:onClick="NumButtonAction"/>
+        <com.example.NumButton android:id="@+id/num5"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="5"
+                app:value="5"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
-        <Button android:id="@+id/num6"
+                android:onClick="NumButtonAction"/>
+        <com.example.NumButton android:id="@+id/num6"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="6"
+                app:value="6"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
+                android:onClick="NumButtonAction"/>
 
     </TableRow>
     <TableRow android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal">
 
-        <Button android:id="@+id/num7"
+        <com.example.NumButton android:id="@+id/num7"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="7"
+                app:value="7"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
-        <Button android:id="@+id/num8"
+                android:onClick="NumButtonAction"/>
+        <com.example.NumButton android:id="@+id/num8"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="8"
+                app:value="8"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
-         <Button android:id="@+id/num9"
+                android:onClick="NumButtonAction"/>
+        <com.example.NumButton android:id="@+id/num9"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="9"
+                app:value="9"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
+                android:onClick="NumButtonAction"/>
 
     </TableRow>
     <TableRow android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal">
 
-        <Button android:id="@+id/num0"
+        <com.example.NumButton android:id="@+id/num0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
+                app:value="0"
                 android:layout_weight="1"
-                android:onClick="numButton"/>
+                android:onClick="NumButtonAction"/>
 
     </TableRow>
     <View
             android:layout_height="2dip"
-            android:background="#FF909090" />
+            android:background="#FF909090"/>
     <TableRow android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal">
-    <Button android:id="@+id/sum"
+        <Button android:id="@+id/sum"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="="
                 android:layout_weight="1"
                 android:onClick="summaryButton"/>
-    <Button android:id="@+id/clear"
+        <Button android:id="@+id/clear"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="C"
