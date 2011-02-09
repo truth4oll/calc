@@ -40,12 +40,12 @@ public class FirstActivity extends Activity {
             isCounted = false;
         }
 
-        NumButton NumButon = (NumButton) view;
-        value = NumButon.getValue();
+        NumButton numButon = (NumButton) view;
+        value = numButon.getValue();
 
 
-        txt.append(String.valueOf(value));
-        txtHistory.append(String.valueOf(value));
+        txt.append(Integer.toString(value));
+        txtHistory.append(Integer.toString(value));
 
     }
 
