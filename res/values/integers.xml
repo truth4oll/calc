@@ -1,0 +1,12 @@
+<resources>
+    <integer name="num1">1</integer>
+    <integer name="num2">2</integer>
+    <integer name="num3">3</integer>
+    <integer name="num4">4</integer>
+    <integer name="num5">5</integer>
+    <integer name="num6">6</integer>
+    <integer name="num7">7</integer>
+    <integer name="num8">8</integer>
+    <integer name="num9">9</integer>
+    <integer name="num0">0</integer>
+</resources>
