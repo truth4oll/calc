@@ -63,28 +63,28 @@
               android:layout_height="wrap_content"
               android:orientation="horizontal">
 
-
         <com.example.NumButton android:id="@+id/num1"
                               android:layout_width="fill_parent"
                               android:layout_height="wrap_content"
                               android:text="1"
-                              app:value="1"
+                              app:value="@integer/num1"
                               android:layout_weight="1"
-                              android:onClick="NumButtonAction"/>
+                              android:onClick="numButtonAction"/>
         <com.example.NumButton android:id="@+id/num2"
                               android:layout_width="fill_parent"
                               android:layout_height="wrap_content"
                               android:text="2"
-                              app:value="2"
+                              app:value="@integer/num2"
                               android:layout_weight="1"
-                              android:onClick="NumButtonAction"/>
+                              android:onClick="numButtonAction"/>
         <com.example.NumButton android:id="@+id/num3"
                               android:layout_width="fill_parent"
                               android:layout_height="wrap_content"
                               android:text="3"
-                              app:value="3"
+                              app:value="@integer/num3"
                               android:layout_weight="1"
-                              android:onClick="NumButtonAction"/>
+                              android:onClick="numButtonAction"/>
+
     </TableRow>
     <TableRow android:layout_width="fill_parent"
               android:layout_height="wrap_content"
@@ -94,23 +94,23 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="4"
-                app:value="4"
+                app:value="@integer/num4"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
         <com.example.NumButton android:id="@+id/num5"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="5"
-                app:value="5"
+                app:value="@integer/num5"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
         <com.example.NumButton android:id="@+id/num6"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="6"
-                app:value="6"
+                app:value="@integer/num6"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
 
     </TableRow>
     <TableRow android:layout_width="fill_parent"
@@ -121,23 +121,23 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="7"
-                app:value="7"
+                app:value="@integer/num7"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
         <com.example.NumButton android:id="@+id/num8"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="8"
-                app:value="8"
+                app:value="@integer/num8"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
         <com.example.NumButton android:id="@+id/num9"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="9"
-                app:value="9"
+                app:value="@integer/num9"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
 
     </TableRow>
     <TableRow android:layout_width="fill_parent"
@@ -148,9 +148,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
-                app:value="0"
+                app:value="@integer/num0"
                 android:layout_weight="1"
-                android:onClick="NumButtonAction"/>
+                android:onClick="numButtonAction"/>
 
     </TableRow>
     <View

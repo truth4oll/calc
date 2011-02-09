@@ -9,7 +9,8 @@ import android.widget.TextView;
 import static java.lang.Long.parseLong;
 
 
-public class FirstActivity extends Activity {
+public class FirstActivity extends Activity
+{
     private long arg1;
     private boolean isCounted = false;
 
@@ -20,7 +21,8 @@ public class FirstActivity extends Activity {
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
@@ -29,10 +31,8 @@ public class FirstActivity extends Activity {
     }
 
 
-
-
-
-    public void NumButtonAction(View view) {
+    public void numButtonAction(View view)
+    {
         int value;
 
         if (isCounted) {
@@ -40,16 +40,15 @@ public class FirstActivity extends Activity {
             isCounted = false;
         }
 
-        NumButton numButon = (NumButton) view;
-        value = numButon.getValue();
-
+        NumButton numButton = (NumButton) view;
+        value = numButton.getValue();
 
         txt.append(Integer.toString(value));
         txtHistory.append(Integer.toString(value));
-
     }
 
-    public void actionButton(View view) {
+    public void actionButton(View view)
+    {
 
         String string = null;
 
@@ -83,7 +82,8 @@ public class FirstActivity extends Activity {
         }
     }
 
-    public void summaryButton(View view) {
+    public void summaryButton(View view)
+    {
 
         String sResult = null;
 
@@ -115,15 +115,16 @@ public class FirstActivity extends Activity {
 
         isCounted = true;
         action = null;
-
     }
 
-    public void clearButton(View view) {
+    public void clearButton(View view)
+    {
         clearAction();
     }
 
 
-    private void clearAction() {
+    private void clearAction()
+    {
 
         arg1 = 0;
         action = null;
